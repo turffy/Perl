@@ -13,6 +13,8 @@ use strict;
 use warnings;
 
 my $serv_name = `cat /etc/sysconfig/network | grep HOSTNAME`;
+my $time = `date`;
+my $timezone = `ls -l /etc/localtime | cut -d ' ' -f11-13`;
 my $app_proc = `ps -ef | grep -v root | grep -i pmon`;
 my $hw = `hplog -v`;
 my $disk_array = `hpacucli ctrl all show config`;
@@ -28,6 +30,10 @@ my $fs = `/opt/soeg/bin/sbdf.sh`;
 
 
 print $serv_name, "\n";
+
+print ".....Date and Time.........\n";
+print $time;
+print $timezone, "\n";
 
 print ".....Check if its RTCIS or DAS process running......\n";
 print $app_proc, "\n";
