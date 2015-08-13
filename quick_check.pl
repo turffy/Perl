@@ -5,8 +5,8 @@
 # Author: Ac Perdon                              #
 # Change:                                        #
 #                                                #
-#       2015.08.06 - Initial                     #
-#                                                #
+# 2015.08.06 - Initial                           #
+# 2015.08.13 - Added to check time and time zone #
 #                                                #
 ##################################################
 use strict;
